@@ -41,3 +41,4 @@ This is a research codebase, not a packaged software tool. It assumes:
 conservative mixing of solutes
 steady end-member compositions
 representative sampling of seasonal variability
+** Data available upon request**
