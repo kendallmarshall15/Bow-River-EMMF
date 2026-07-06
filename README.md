@@ -18,32 +18,13 @@ the Front Ranges, where more permeable units and structural features support lon
 
 These differences show up clearly in the chemistry and mixing behaviour downstream.
 
-bow-river-emmf/
-│
-├── run_emmf.py                 # Main execution script
-│
-├── config/
-│   └── config.py               # All model parameters and file paths
-│
-├── scripts/
-│   ├── io.py                  # Data loading functions
-│   ├── preprocess.py         # Site filtering and cleaning
-│   ├── emma_system.py        # Weighted EMMA system builder
-│   ├── solver.py             # Constrained mixing solver
-│   ├── monte_carlo.py       # Uncertainty propagation
-│   ├── diagnostics.py       # End-member redundancy analysis
-│   ├── export.py            # Output generation
-│
-├── data/
-│   ├── raw/                  # Input datasets (optional)
-│   └── processed/
-│
-├── outputs/
-│   ├── fractions/           # EMMA results (median + CI)
-│   ├── diagnostics/         # Model diagnostics
-│   └── figures/             # Plots
-│
-└── README.md
+run_emma.py            main entry point
+config/config.py       paths + parameters + uncertainty values
+scripts/io.py          reads river + endmember data
+scripts/emma_system.py builds weighted EMMA system
+scripts/solver.py      constrained solver (SLSQP + NNLS fallback)
+scripts/monte_carlo.py uncertainty propagation
+scripts/export.py      writes final CSV output
 
 Install the basic dependencies:
 
